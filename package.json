@@ -3,11 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "author": "Kristian Frølund",
+  "keywords": [
+    "react",
+    "native",
+    "react-component",
+    "react-native",
+    "react-native-component",
+    "ios",
+    "android",
+  ],
+  "homepage": "https://github.com/Froelund/react-native-text-highlight",
+  "bugs": "https://github.com/Froelund/react-native-text-highlight/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Froelund/react-native-text-highlight.git"
+  },
   "scripts": {
     "test": "jest --no-cache"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-jest": "^12.1.0",
     "babel-polyfill": "^6.9.1",
