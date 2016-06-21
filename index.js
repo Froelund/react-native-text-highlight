@@ -8,6 +8,8 @@ import {
 
 import sectionString from './sectionString';
 
+var textIndex = 0;
+
 export default class TextHighLight extends React.Component {
 
   constructor(props) {
@@ -19,14 +21,15 @@ export default class TextHighLight extends React.Component {
     const {
       highlight,
       caseSensitive,
-      str,
+      children,
       highlightStyle,
     } = this.props;
 
-    const sections = sectionString(highlight, str, caseSensitive);
+    const sections = sectionString(highlight, children, caseSensitive);
     const renderedText = sections.map((section) => {
       var style = (section.highlight == true ? highlightStyle : null);
-      return <Text style={style}>{section.text}</Text>;
+      var index = textIndex++;
+      return <Text key={"text-highlight-element-" + index} style={style}>{section.text}</Text>;
     });
 
     return (
@@ -38,7 +41,8 @@ export default class TextHighLight extends React.Component {
 TextHighLight.propTypes = {
   highlight: PropTypes.string,
   str: PropTypes.string,
-  caseSensitive: PropTypes.bool
+  caseSensitive: PropTypes.bool,
+  children: PropTypes.string,
 };
 
 TextHighLight.defaultProps = {

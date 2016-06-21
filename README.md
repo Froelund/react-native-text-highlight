@@ -10,7 +10,6 @@ Small library for highlighting text in react-native.
 import TextHighlight from 'react-native-text-highlight';
 ...
 <TextHighlight
-  str="People love to code in javascript."
   highlight="code"
   highlightStyle={{
     color: 'green'
@@ -18,12 +17,13 @@ import TextHighlight from 'react-native-text-highlight';
   style={{
     color: 'red'
   }}
-/>
+>
+  People love to code in javascript.
+</TextHighLight>
 ```
 
 | Property | Description | default  |
 | -------- | ----------- | -------- |
-|   str    | The string that will be searched for matches | "" |
 | highlight | The key that will be searched for in the str. |   null |
 | caseSensitive | Determines if the search should be case sensitive | false |
 
@@ -36,6 +36,6 @@ import TextHighlight from 'react-native-text-highlight';
 
 ### Todo
 
-- [ ] Change the component to accept the str as a child to the component instead of property.
+- [X] Change the component to accept the str as a child to the component instead of property.
 - [ ] Add an Example project.
 - [ ] Add Screenshot of the component being used.
