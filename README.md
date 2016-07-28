@@ -19,7 +19,7 @@ import TextHighlight from 'react-native-text-highlight';
   }}
 >
   People love to code in javascript.
-</TextHighLight>
+</TextHighlight>
 ```
 
 | Property | Description | default  |
